@@ -16,13 +16,18 @@ function Loading({ children }) {
 					justifyContent: 'center',
 					alignItems: 'center',
 					minHeight: 180,
-				}}>
+				}}
+			>
 				<CircularProgress />
 				<div style={{ marginTop: 12 }}>Cargando...</div>
 			</div>
 		);
 	} else if (!ctx.user?.usuario) {
-		return <div style={{ padding: 20, color: 'red', textAlign: 'center' }}>❌ Back End no accesible.</div>;
+		return (
+			<div style={{ padding: 20, color: 'red', textAlign: 'center' }}>
+				❌ Back End no accesible.
+			</div>
+		);
 	}
 	return <>{children}</>;
 }

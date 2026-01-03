@@ -6,7 +6,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 
-const StyledMenu = styled((props) => (
+const StyledMenu = styled(props => (
 	<Menu
 		elevation={0}
 		anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -21,7 +21,8 @@ const StyledMenu = styled((props) => (
 		color: 'rgb(55,65,81)',
 		// Aumentar z-index para asegurar que esté por encima de otros elementos
 		zIndex: theme.zIndex.modal + 1,
-		boxShadow: 'rgb(255 255 255 / 0%) 0 0 0 0, rgb(0 0 0 / 5%) 0 0 0 1px, rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 5%) 0 4px 6px -2px',
+		boxShadow:
+			'rgb(255 255 255 / 0%) 0 0 0 0, rgb(0 0 0 / 5%) 0 0 0 1px, rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 5%) 0 4px 6px -2px',
 		'& .MuiMenuItem-root': {
 			'& .MuiSvgIcon-root': {
 				fontSize: 20,
@@ -29,7 +30,10 @@ const StyledMenu = styled((props) => (
 				color: theme.palette.text.secondary,
 			},
 			'&:active': {
-				backgroundColor: alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity),
+				backgroundColor: alpha(
+					theme.palette.primary.main,
+					theme.palette.action.selectedOpacity,
+				),
 			},
 		},
 	},
@@ -38,7 +42,7 @@ const StyledMenu = styled((props) => (
 function UserOptionsMenu({ onAssign, onEdit }) {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
-	const openMenu = (e) => setAnchorEl(e.currentTarget);
+	const openMenu = e => setAnchorEl(e.currentTarget);
 	const closeMenu = () => setAnchorEl(null);
 
 	const handleAssign = () => {

@@ -14,11 +14,13 @@ const Header = ({ title = '', onAssign, onEdit }) => {
 	const ctx = useContext(UserContext) ?? {};
 	const user = ctx.user ?? ctx;
 	const raw = ctx.rawPerms ?? ctx.perms ?? '';
-//	const permsSet = useMemo(() => parsePerms(raw), [raw]);
+	//	const permsSet = useMemo(() => parsePerms(raw), [raw]);
 
-//	const isAdmin = useMemo(() => permsSet.has('Y'), [permsSet]);
+	//	const isAdmin = useMemo(() => permsSet.has('Y'), [permsSet]);
 
-	const displayName = ctx.loading ? 'Cargando...' : user?.nombreCompleto || user?.usuario || user?.USUARIO || 'Invitado';
+	const displayName = ctx.loading
+		? 'Cargando...'
+		: user?.nombreCompleto || user?.usuario || user?.USUARIO || 'Invitado';
 
 	return (
 		<Box
@@ -50,7 +52,8 @@ const Header = ({ title = '', onAssign, onEdit }) => {
 					left: 0,
 					right: 0,
 					height: '2px',
-					background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
+					background:
+						'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
 				},
 			}}
 		>
@@ -142,7 +145,6 @@ const Header = ({ title = '', onAssign, onEdit }) => {
 						{ctx.loading ? 'Cargando...' : displayName}
 					</Typography>
 				</Box>
-
 			</Box>
 		</Box>
 	);

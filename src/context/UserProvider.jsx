@@ -20,7 +20,8 @@ function UserProvider({ children }) {
 			try {
 				const userObj = await api_usuario.getUsuarioActual();
 
-				if (!userObj?.usuario) throw new Error('❌ No se pudo obtener el usuario');
+				if (!userObj?.usuario)
+					throw new Error('❌ No se pudo obtener el usuario');
 
 				// 👇 ahora buscamos sus datos completos
 				const userDetailsResp = await api_usuario.getUsuario(userObj.usuario);
@@ -55,7 +56,7 @@ function UserProvider({ children }) {
 				});
 			} catch (err) {
 				console.error('❌ Error en UserProvider:', err);
-				setState((s) => ({ ...s, loading: false }));
+				setState(s => ({ ...s, loading: false }));
 			}
 		})();
 	}, []);

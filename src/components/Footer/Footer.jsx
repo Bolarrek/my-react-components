@@ -32,7 +32,8 @@ const Footer = () => {
 					left: 0,
 					right: 0,
 					height: '2px',
-					background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
+					background:
+						'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
 				},
 			}}
 		>
@@ -95,7 +96,8 @@ const Footer = () => {
 					sx={{
 						width: { xs: 60, sm: 80 },
 						height: 2,
-						background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+						background:
+							'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
 						borderRadius: 1,
 						mt: 0.5,
 					}}
