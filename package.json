@@ -1,0 +1,41 @@
+{
+  "name": "@tu-org/my-react-components",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --ext .js,.mjs,.cjs --fix",
+		"lint:imports": "eslint . --ext .js,.mjs | findstr \"import/no-unresolved\"",
+		"unused": "unimported",
+		"depcheck": "depcheck"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.0",
+    "depcheck": "^1.4.7",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"eslint-plugin-react-refresh": "^0.4.14",
+    "prettier": "^3.3.3"
+  }
+}

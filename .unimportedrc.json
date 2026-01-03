@@ -1,0 +1,11 @@
+{
+	"entry": ["src/main.jsx"],
+	"ignorePatterns": [
+		"**/*.test.*",
+		"**/*.spec.*",
+		"src/assets/**",
+		"dist/**",
+		"docs/**"
+	],
+	"ignoreDependencies": ["nodemon"]
+}
